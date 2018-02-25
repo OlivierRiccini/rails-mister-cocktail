@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+body {
+  height: 100vh;
+  text-align: center;
+  color: $green;
+}
+
+.container {
+  margin-top: 95px;
+}
+.card-container {
+  padding: 10px;
+}

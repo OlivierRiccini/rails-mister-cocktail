@@ -1,0 +1,29 @@
+.btn-perso {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: $light-gray;
+  border: 2px solid $green;
+  a {
+    color: #8BC34A;
+    font-size: 25px;
+  }
+  &:hover {
+    background-color: $green;
+    a {
+      text-decoration: none;
+      color: $light-gray;
+    }
+  }
+}
+
+.small {
+  a {
+    font-size: 16px;
+  };
+  padding: 8px 16px;
+}
+
+.btn-banner {
+  background-color: transparent;
+}

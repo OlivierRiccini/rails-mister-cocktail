@@ -1,7 +1,19 @@
-<h1><%= @cocktail.name %></h1>
-<% @cocktail.ingredients.each do |ingredient|  %>
-  <p><%= render :template => "doses/index" %>  of <%= ingredient.name %></p>
-  <% end %>
-
-<%= link_to 'New Ingredients', new_cocktail_dose_path(@cocktail) %>
-<%= link_to 'Home', cocktails_path %>
+<%= render "layouts/navbar" %>
+<div class="banner banner-show">
+  <h1><%= @cocktail.name %></h1>
+</div>
+<div class="container container-show">
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <ul>
+    <p class="recipe-title">Ingredients for a perfect <%= @cocktail.name %></p>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %></li>
+    <% end %>
+  </ul>
+</div>
+<button class="center btn btn-perso small"><%= link_to 'Add a Ingredient', new_cocktail_dose_path(@cocktail) %>
+</button>
+  <button class="center btn btn-perso small">
+  <%= link_to 'Back', cocktails_path %>
+  </button>
+<%= render "layouts/footer" %>

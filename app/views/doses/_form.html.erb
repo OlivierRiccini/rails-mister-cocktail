@@ -1,14 +1,16 @@
-<h2>Recipe</h2>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.error_notification %>
+<% render "layouts/navbar" %>
+<div class="container container-form">
+  <%= simple_form_for ([@cocktail, @dose]) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :amount, :as => "integer" %>
-    <%= f.association :ingredient %>
-    <%= f.input :description %>
-  </div>
+    <div class="form-inputs">
+      <%= f.association :ingredient %>
+      <%= f.input :description %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+     <%= f.button :submit, class: "btn-perso" %>
+    </div>
+  <% end %>
+</div>
+

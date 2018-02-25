@@ -8,6 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
 }
 
 /* Logo */
@@ -37,12 +41,12 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: $green;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+  color: $green;
+  text-decoration: underline;
 }
 
 /* Dropdown menu */
